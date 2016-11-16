@@ -1,0 +1,21 @@
+{
+  "name": "jumapp_frontend",
+  "version": "0.0.0",
+  "authors": [
+    "iammolina <jicayun@aol.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.8",
+    "angular-material": "~1.1.1",
+    "angular-moment": "~1.0.0",
+    "angular-jwt": "~0.1.8"
+  }
+}
