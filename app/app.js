@@ -64,3 +64,28 @@ app.config(function($stateProvider,$urlRouterProvider,$httpProvider,jwtIntercept
 
 
 });
+
+
+app.run(function($rootScope , $state)
+{
+      $rootScope.$on("$stateChangeSuccess", function(event , toState , toParams , fromState , fromParams) 
+      {
+            var token = localStorage.getItem("token");
+            
+            if(toState.url === "/" && token)
+            {
+               if(!fromState.name)
+               {
+                  $state.go('home');
+               }else{
+
+                  $state.go(fromState.name);
+               }
+
+            }
+            if(toState.url != "/" && !token)
+            {
+              $state.go('login');
+            }
+      });
+});
