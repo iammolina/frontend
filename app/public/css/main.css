@@ -1,0 +1,28 @@
+.formlogin
+{
+	margin-top: 100px;
+	margin-left: 450px;
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right:50px; 
+	padding-bottom: 50px;
+	border-color: slategray;
+	border-style: solid;
+	max-width: 400px;
+	background-color: white;
+
+}
+
+.logo
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.oldpasswd
+{
+	padding-left: 50px;
+
+}

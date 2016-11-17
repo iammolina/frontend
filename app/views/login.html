@@ -1,0 +1,40 @@
+<div class="formlogin">
+<hgroup>
+  <img class="logo" src="app/public/img/logo.png">
+</hgroup>
+<form ng-submit="submit(user)" name="projectForm">
+  	
+  	<md-input-container class="md-block">
+      
+        <input required type="email" name="username" ng-model="project.username"
+               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+         <span class="highlight"></span><label>Email</label>
+
+
+        <div ng-messages="projectForm.username.$error" role="alert">
+          <div ng-message="required">
+            EL email es requerido ...
+          </div>
+        </div>
+     </md-input-container>
+
+     <md-input-container class="md-block">
+        <input type="password" required minlength="6" name="password" ng-model="project.password">
+        <span class="highlight"></span><label>Contraseña</label>
+
+        <div ng-messages="projectForm.password.$error">
+          <div ng-message="Unauthorized">La dirección de correo electrónico y la contraseña que has introducido no coinciden.</div>
+          <div ng-message="required">Es requerido.</div>
+          <div ng-message="minlength">El minimo de caracteres es 6</div>
+        </div>
+      </md-input-container>
+
+
+      <md-button  class="md-raised md-primary md-hue-1" flex="100" ng-click="actionAuth(project)">  Iniciar Sesion  </md-button>
+      <a class="oldpasswd" href="">Se olvido la contraseña ?</a>
+
+
+  </form>
+<footer>
+</footer>
+
