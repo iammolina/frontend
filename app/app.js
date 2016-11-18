@@ -2,10 +2,7 @@ var app = angular.module('app', ['ngMaterial','ui.router','angular-jwt']);
 
 app.config(function($stateProvider,$urlRouterProvider,$httpProvider,jwtInterceptorProvider,$mdThemingProvider)
 {
-
-
   $httpProvider.defaults.useXDomain = true;
-
 
   delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
