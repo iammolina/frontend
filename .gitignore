@@ -1,7 +1,4 @@
 .DS_Store
-.gitignore
-bower.json
-gulpfile.js
-package.json
 node_modules
-phploy.ini
+components
+
